@@ -5,8 +5,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ListView
+import android.widget.PopupMenu
+import android.widget.Toast
 import com.work.listview.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.popup.*
+import kotlinx.android.synthetic.main.webview.*
 import java.time.LocalDate
 import java.util.*
 
@@ -21,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
     nextBtn.setOnClickListener{nextView()}
     preBtn.setOnClickListener { previousView() }
+    showPopup.setOnClickListener { showPopup() }
+    webView.loadUrl("https://www.javatpoint.com/kotlin-android-webview")
   }
 
   private fun nextView(){
@@ -34,4 +40,13 @@ class MainActivity : AppCompatActivity() {
     viewFlipper.showPrevious()
   }
 
+  private fun showPopup(){
+    val popupMemu = PopupMenu(this, showPopup)
+    popupMemu.menuInflater.inflate(R.menu.menu_popup, popupMemu.menu)
+    popupMemu.setOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { item ->
+      Toast.makeText(this, item.title, Toast.LENGTH_LONG).show()
+      true
+    })
+    popupMemu.show()
+  }
 }
