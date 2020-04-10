@@ -1,3 +1,3 @@
 rootProject.name='ListViewKotlin'
-include ':app'
+include ':listview'
 include ':flipper'
