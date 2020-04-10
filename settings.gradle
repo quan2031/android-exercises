@@ -1,3 +1,4 @@
 rootProject.name='ListViewKotlin'
 include ':listview'
 include ':flipper'
+include ':alertdialog'
