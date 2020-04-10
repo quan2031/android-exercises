@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        >
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="5dp"
+            >
+            <Button
+                android:id="@+id/sortNameBtn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="▲"
+                android:textSize="30dp"
+                android:background="@android:color/holo_orange_light"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            >
+            <Button
+                android:id="@+id/sortDateBtn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="▲"
+                android:textSize="30dp"
+                android:background="@android:color/holo_orange_light"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lisview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>
+
